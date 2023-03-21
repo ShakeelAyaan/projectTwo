@@ -1,0 +1,16 @@
+
+.Login{
+    width: 100vw; 
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width:900px) {
+    .Login{
+    width: 100%;
+    align-items: center;
+}
+.child{
+    transform:rotate3d(3px)
+}}

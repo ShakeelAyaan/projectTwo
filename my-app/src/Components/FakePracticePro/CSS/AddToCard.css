@@ -1,0 +1,48 @@
+
+      .Addtocard1{
+        width: 100vw;
+      }
+
+
+     .Addtocard{
+        width: 100vw ;
+         align-items: center;text-align: center ;font-weight: 600px;font-family:Verdana, Geneva, Tahoma, sans-serif;
+     }
+     .add_child{
+        display:flex ; justify-content:space-around;
+        margin-bottom:2rem;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        background-color: white;
+     }
+@media screen and (max-width:900px) {
+    .Addtocard1{
+        display: flex;
+        justify-content: center;
+        /* margin-left: 2rem; */
+        width: 100%;
+        text-align: center;
+        align-items: center;
+      
+    }
+    .Addtocard{
+       display: block;
+      width: 100%;
+      text-align: center;
+      align-items: center;
+    }
+    .add_child{
+       display: block;
+       margin-top: 1rem;   
+       align-items: center;
+       width: 100%;
+       text-align: center;
+       align-items: center;
+       border-radius: 25px ;
+       box-shadow: 2px 2px 5px #f2f2;
+       border: 2px solid #f2f2;
+
+
+    }
+}

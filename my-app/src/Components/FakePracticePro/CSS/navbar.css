@@ -1,0 +1,210 @@
+
+.inpIco{
+ 
+   display: flex;
+   justify-content: space-around;
+   width: 60%;
+}
+.flipkart{
+    color:"yellow";
+    margin-top: 8px;
+    position: absolute;
+    top:14px;
+    left: 54px;
+    transform: scale(1.2)
+}
+.childCom{
+   
+
+    padding-left: 2rem;
+    display: flex;
+    width: 35%;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+}
+.leftComp{
+
+
+padding-left: 1rem;
+  display: flex;
+  width: 50%;
+  align-items: center;
+  text-align: center;
+  justify-content: space-evenly;
+}
+.menuIcon{
+  visibility: hidden;
+  pointer-events:visibleStroke;
+  color:white;
+}
+.twoGrid{
+  display: flex;
+  justify-content: space-between;
+  background-color: #0990f6;
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  top:0px;
+  z-index:9999;
+  /* overflow:none; */
+}
+.spd{
+  position: absolute;
+    top: 60px ;
+    left: 0px;
+    display: inline-block;
+     background:#fff;
+     overflow-y:scroll;
+      scroll-behavior:smooth;
+     height: auto;
+     width: 68%;
+     text-align: center;
+}
+.spd::-webkit-scrollbar{
+  display: none;
+}
+
+@media screen  and (max-width:900px) {
+    
+  .spd{
+    width:350%; 
+    overflow-x: scroll;
+        position: absolute;
+        left: -14rem;
+       top:68px;
+        padding-left:1rem;
+    
+  }
+  .spd::-webkit-scrollbar{
+    display: none;
+  }
+  .leftComp{
+    width: 100vw;
+  }
+ .twoGrid{
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  height: 80px;
+  
+ }
+
+ .childCom{
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  text-align: center;
+  height:60vh;
+  padding: 150px;
+  padding-top:6rem; 
+  width: 100%;
+  align-items: center;
+  position :absolute;
+  top:80px;
+  left: 0px;
+  line-height: 4.8rem;
+  font-size: 1.6rem;
+  color:whitesmoke ;
+  background-color: black;
+  transform: translateX(120%) ;
+  transition: 0.7s; 
+
+ }
+ 
+ .childCom.active{
+    transform: translateX(0%); 
+
+    /* z-index: -1; */
+
+ } 
+ 
+
+ 
+
+ .mallIcon{
+ padding-bottom: 25px;  
+ align-items: center;
+ text-align: center;
+ padding-left: 22px;
+ }
+ /* .mallIcon.active{
+  display: none;
+ } */
+ .mallchild{
+  font-size:30px;
+
+ }
+ .leftComp{
+   display: flex;
+   justify-content: space-evenly;
+   width: 100%;
+   height: 80px;
+ }
+ .menuIcon{
+  position: absolute;
+  top:auto;
+  right:13px;
+  visibility: visible;
+ pointer-events:painted;
+ }
+ 
+.flipkart{
+  position: absolute;
+  top:auto;
+  left: 11px;
+  color:black;
+  transform: scale(1)
+
+}
+ .inpIco{
+  width: 45%;
+  border-radius: 33px;
+  position: relative;
+  left: 3.6rem;
+  margin: 10rem;
+  transform: scale(0.8);
+ }
+ .inputText{
+  padding: 1rem;
+  font-size: 14px;
+  width: 46%;
+  border-radius: 33px;
+  caret-color: rgb(46, 3, 71);
+ }
+ 
+
+}
+
+@media (min-width:900px) and  (max-width:1470px) {
+  
+ .childCom {
+  padding-left: 1rem;
+  display: flex;
+  width: 40%;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+ }
+ .leftComp{
+  padding-left: 1rem;
+  display: flex;
+  width: 60%;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+ }
+ .inpIco{
+  width: 430px;
+ }
+ .inputText{
+  margin-left: 5rem;
+ }
+ .flipkart{
+  transform:scale(1.2);
+  position: absolute;
+  left: 3.5rem;
+  
+ }
+ 
+}

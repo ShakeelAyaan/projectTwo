@@ -1,0 +1,29 @@
+
+.component{
+    background-color:#ffff;
+    width: 100vw;
+}
+.navbarbottomchild{
+    width: 100vw;
+    display: flex; 
+    flex-direction: column;
+    margin-top: 4rem;
+    text-align: center;
+    align-items: center;
+ }
+@media screen and (max-width:900px) {
+    .navbarbottom{
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    
+    }
+    .navbarbottomchild{
+        width: 100%;
+    }
+    .component{
+        width: 100%;
+    }
+} 
