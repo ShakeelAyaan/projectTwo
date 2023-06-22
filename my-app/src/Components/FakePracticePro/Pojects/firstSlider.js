@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 import React from 'react'
 import Carousel from 'react-multi-carousel'
-// import { bannerData } from '../FakePracticePro/FlipkartData';
 import { bannerData } from '../FlipkartData';
 import "react-multi-carousel/lib/styles.css";
 import '../CSS/firstSlider.css'
@@ -10,6 +9,7 @@ export const FirstSlider = () => {
   // if ({authorized}) {
   //   return <redirect to="/Login" />
   // }
+  // autoPlay={this.props.deviceType !== "mobile" ? true : false}
 
     const Image = styled('img')`
     width:100%;
@@ -46,9 +46,9 @@ export const FirstSlider = () => {
         arrows={null}
     >
     {
-        bannerData.map((event)=>{
+        bannerData.map((event , id)=>{
             return(
-                <Image className='images' src={event.url}  alt=''/>
+                <Image className='images' src={event.url}  alt='' key={id}/>
             )
         })
     }
@@ -59,5 +59,4 @@ export const FirstSlider = () => {
   )
 }
 
-// autoPlay={this.props.deviceType !== "mobile" ? true : false}
 

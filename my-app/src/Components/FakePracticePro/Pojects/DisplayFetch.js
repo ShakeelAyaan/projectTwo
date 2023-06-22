@@ -1,14 +1,14 @@
 
 import { Button,Typography,Box , Rating} from '@mui/material'
 import { useSelector , useDispatch } from 'react-redux'
-import { useParams, useNavigate, Route } from 'react-router-dom'
-import Buynow from '../../Buynow'
+import { useParams, useNavigate } from 'react-router-dom'
+// import Buynow from '../../Buynow'
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import { AddToCardApi } from '../../AddToCardApi'
-import { fouraction } from '../Redux/action'
-import { useEffect } from 'react'
-import { postdata } from '../Redux/Addreducer'
-import { fake } from '../FLIPAKRTpRODUCTS/fakestoreai'  
+// import { AddToCardApi } from '../../AddToCardApi'
+import { fouraction } from '../../../Redux/action'
+// import { useEffect } from 'react'
+// import { postdata } from '../../../Redux/Addreducer'
+// import { fake } from '../FLIPAKRTpRODUCTS/fakestoreai'  
 import '../CSS/displayfetch.css'
 const DisplayFetch = () => {
    const dispatch = useDispatch()

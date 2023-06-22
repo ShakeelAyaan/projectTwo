@@ -1,6 +1,5 @@
-import { useEffect } from "react";
-import { products } from "../FlipkartData";
-import { action, Valueactiontwo } from "./action";
+// import { products } from "../Components/FakePracticePro/FlipkartData";
+// import { action, Valueactiontwo } from "./action";
 import { REMOVEITEM, PRODUCT, INCREAMENT, DECREAMENT } from "./actionType";
 
  const Initialvalue = {
@@ -18,8 +17,7 @@ const Reducer = (state = Initialvalue, action) => {
   let index;
   switch (action.type) {
     case PRODUCT:
-      const {  newproduct , quantity  } = action.payload
-      // const { price, qunt, product } = state
+      const {  newproduct   } = action.payload
       const exite = state.product.find(x => x.id === newproduct.id)
       if (exite) {
         return state
@@ -74,7 +72,6 @@ const Reducer = (state = Initialvalue, action) => {
       } else {
         return state;
       }
-      break;
     default: return state
   }
 

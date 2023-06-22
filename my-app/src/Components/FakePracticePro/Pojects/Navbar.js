@@ -9,15 +9,15 @@ import InputBase from '@mui/material/InputBase';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
-import { Button } from '@mui/material';
-import NavbarPart1 from '../Pojects/NavbarPart1'
+// import { Button } from '@mui/material';
+// import NavbarPart1 from '../Pojects/NavbarPart1'
+// import NavbarPart1 from "../Pojects/NavbarPart1"
 import { useState } from 'react'
 import { Link } from 'react-router-dom';
-import NavBarBottom from './NavBarBottom';
-// import { products } from '../FakePracticePro/FlipkartData';
-import { products } from '../FlipkartData';
+// import NavBarBottom from './NavBarBottom';
+// import { products } from '../FlipkartData';
 import '../CSS/navbar.css'
-import { actionTwo } from '../Redux/action';
+import { actionTwo } from '../../../Redux/action';
 import { useDispatch } from 'react-redux';
 
 const Search = styled('div')(({ theme }) => ({

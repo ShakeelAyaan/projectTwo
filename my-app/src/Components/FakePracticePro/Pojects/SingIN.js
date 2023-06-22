@@ -1,9 +1,9 @@
-import { TextField ,  Box, Card,Button, Typography} from '@mui/material';
-import { textAlign } from '@mui/system';
+import { TextField ,   Card,Button, Typography} from '@mui/material';
+// import { textAlign } from '@mui/system';
 import Avatar from '@mui/material/Avatar';
 import { useState } from 'react';
 // import Avatar from "@mui/icons-material"
-import { json, Link, useNavigate } from 'react-router-dom';
+import {  Link, useNavigate } from 'react-router-dom';
 import "../CSS/Login.css"
 const SingIN = () => {
   const Navigate = useNavigate()

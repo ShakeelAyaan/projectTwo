@@ -1,8 +1,8 @@
 // import axios from "axios";
 // import { useParams } from "react-router-dom"
 
-import { action } from "./action";
-import { DECREAMENT, INCREAMENT } from "./actionType";
+// import { action } from "./action";
+// import { DECREAMENT, INCREAMENT } from "./actionType";
 
 const Initialstate = {
     Fprice: 0,
@@ -29,8 +29,6 @@ export const FourthReducer = (state = Initialstate, fouraction) => {
                     Fproduct: [...state.Fproduct, newproduct]
                 }
             }
-            break;
-        
         case 'REMOVECARD':
             const { id } = fouraction.payload 
             const  delteproduct = state.Fproduct.filter(f =>f.id !== id )
@@ -42,8 +40,6 @@ export const FourthReducer = (state = Initialstate, fouraction) => {
                     Fquantity: state.Fquantity - filtered.quantity,
                     Fprice: state.Fprice - filtered.price * filtered.quantity
             }
-            break;
-        
         case 'INCREAMENTWO':
             const { id2 } = fouraction.payload;
             const  decreamentprouct = state.Fproduct.find(f => f.id === id2)
@@ -55,8 +51,6 @@ export const FourthReducer = (state = Initialstate, fouraction) => {
                 Fprice: state.Fprice + decreamentprouct.price ,
                 Fquantity: state.Fquantity + 1
             }
-            break;
-        
             case 'DECREAMENTWO':
                 const { id3 } = fouraction.payload;
               const   increamentprouct = state.Fproduct.find(f => f.id === id3)
@@ -73,8 +67,6 @@ export const FourthReducer = (state = Initialstate, fouraction) => {
             else {
                 return state;
         }
-            break;
-        
         default  : return state     
         
     }

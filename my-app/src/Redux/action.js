@@ -1,5 +1,5 @@
 
-import {ADDTOCARD ,searchscr, PRODUCT, REMOVEITEM,SER} from './actionType'
+import {SER} from './actionType'
 
 
 // export const action =  (type,payload ) => ({ type,payload });

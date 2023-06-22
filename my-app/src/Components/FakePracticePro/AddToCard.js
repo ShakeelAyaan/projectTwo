@@ -1,10 +1,10 @@
-import { Box } from '@mui/system'
-import React, { useEffect, useState } from 'react'
+// import { Box } from '@mui/system'
+// import React, {  useState } from 'react'
 import { useSelector ,useDispatch} from 'react-redux'
-import { useParams, Link,useNavigate, redirect } from 'react-router-dom'
+// import { useParams,useNavigate } from 'react-router-dom'
 import { Typography ,Button, Divider } from '@mui/material'
-import { action, fouraction, removeCartItem, Valueaction, Valueactiontwo  } from '../FakePracticePro/Redux/action'
-import { DECREAMENT, INCREAMENT, REMOVEITEM } from '../FakePracticePro/Redux/actionType'
+import {  fouraction,    } from '../../Redux/action'
+import { DECREAMENT, INCREAMENT, REMOVEITEM } from '../../Redux/actionType'
 import AddToCardDisplya from './AddToCardDisplya'
 import DeleteIcon from '@mui/icons-material/Delete';
 import "./CSS/AddToCard.css"
@@ -12,12 +12,12 @@ import AddtoCardDisplay2 from '../AddtoCardDisplay2'
 const AddToCard = () => {
   const { Fprice, Fproduct,Fquantity} = useSelector(state => state.FourthReducer)
   const { product, price, qunt } = useSelector(state => state.Reducer)
-  const [quantitya, setquantitya] = useState(1)
+  // const [quantitya, setquantitya] = useState(1)
   const dispatch=useDispatch()
-  const [Remove,setRemove]=useState()
+  // const [Remove,setRemove]=useState()
 
-  const navigate = useNavigate()
-  const { id } = useParams()
+  // const navigate = useNavigate()
+  // const { id } = useParams()
 
   const RemoveItem = (id) => {
     dispatch({type: REMOVEITEM, payload: id})
@@ -60,9 +60,9 @@ const AddToCard = () => {
         <div>
         
         {
-         product.map((prs) => {
+         product.map((prs , index) => {
             return (
-              <div className='add_child' >
+              <div className='add_child'  key={index}>
                 
                 <Typography component='img' src={prs.url} style={{ width: '80px', height: '80px' }} />
                 <p>product Name<br/>{prs.title.shortTitle}</p>
@@ -96,14 +96,10 @@ const AddToCard = () => {
        
         <div className='Addtocard' >
               <div className='add_child' >
-                 
                 <Typography component='img' src={Fproduct.image} style={{ width: '80px', height: '80px' }} />
                 <p>product Name<br/>{Fproduct.category}</p>
                 <p>Rs/price<br />{Fproduct.price}</p>
-                
                <Typography sx={{ alignItems: 'center', marginTop: '30px' }}>
-                  
-                                    
          <Button variant='outlined' sx={{ borderRadius: '50px' }} onClick={() =>DecreamnetQunttwo(Fproduct.id  )}>-</Button>
           <Button variant='outlined' sx={{borderRadius:'9px'}}> {Fproduct.quantity} </Button>
           <Button variant='outlined' sx={{borderRadius:'50px'}} onClick={()=>InecreamentQunttwo(Fproduct.id)}>+</Button>
@@ -123,7 +119,7 @@ const AddToCard = () => {
         <div className='totals'>
           <Divider/>
 {           
-          Fproduct.length == 0 && product.length == 0 ?
+          Fproduct.length === 0 && product.length === 0 ?
           <AddToCardDisplya  product={product} Fproduct={Fproduct} /> 
             : <AddtoCardDisplay2 className='total' Fprice={Fprice} Fquantity={Fquantity} price={price} qunt={qunt} /> 
            

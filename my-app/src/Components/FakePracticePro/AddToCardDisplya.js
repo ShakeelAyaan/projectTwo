@@ -11,7 +11,7 @@ const AddToCardDisplya = ({ product ,Fproduct }) => {
       {
           <div style={{width:'100vw'}}>
                   <div>
-                      <img src={'noproduct.jpg'} style={{ width: '100px', height: '100px', borderRadius: "80px" }} />
+                      <img src={'noproduct.jpg'} style={{ width: '100px', height: '100px', borderRadius: "80px" }} alt='jpg' />
           <h1>product is Empty</h1>
                       
             <Button onClick={() => navigate('/')} sx={{ fontSize: '18px' }}>get product</Button></div>

@@ -15,7 +15,6 @@ export const FetchReducer = (state = InitialState, { type, payload } )=> {
                 ...state,
                  FetchData : fake
             }
-            break;
         default : return state
       }
 

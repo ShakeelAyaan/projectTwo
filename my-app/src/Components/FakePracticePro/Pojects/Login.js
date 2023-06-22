@@ -1,10 +1,8 @@
-import { TextField ,  Box, Card,Button, Typography} from '@mui/material';
-import { textAlign } from '@mui/system';
+import { TextField ,  Card,Button, Typography} from '@mui/material';
 import Avatar from '@mui/material/Avatar';
-import { useEffect, useState } from 'react';
-import { json, Link,redirect,useNavigate } from 'react-router-dom';
-import axios from 'axios'
-import { post } from '../FlipkartData';
+import {  useState } from 'react';
+import {  Link,useNavigate } from 'react-router-dom';
+// import { post } from '../FlipkartData';
 import '../CSS/Login.css'
 
 const Login = () => {
@@ -51,7 +49,7 @@ const Login = () => {
           className='child'
           sx={{
             py: 2,
-            display: 'grid',
+            // display: 'grid',
             gap: 2,
             alignItems: 'center',
             flexWrap: 'wrap',

@@ -1,11 +1,12 @@
 @media screen and (max-width:900px) {
     .firstSlider{
    width:100%;        
-    height: 100px;
+    height: 130px;
+
     }
     .images{
         width: 100%;
-        height: 100px;
+        height: 130px;
     }
    
 }
