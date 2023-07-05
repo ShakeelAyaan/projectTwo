@@ -2,7 +2,7 @@ import { Box, Divider, } from '@mui/material'
 import Carousel   from 'react-multi-carousel'
 import { Link } from 'react-router-dom'
 import {  useSelector } from 'react-redux'
-import { useEffect, useState , useMemo  } from 'react' 
+import { useEffect, useState   } from 'react' 
 import { products } from './FlipkartData'
 // import { NavbarPartOne } from './NavbarPartOne'
 // import ReducerTwo from '../../Redux/ReducerTwo'
@@ -15,16 +15,19 @@ const [search, setsearch] = useState(products)
 // const dispatch = useDispatch()
 const { valueset } = useSelector(state => state.ReducerTwo)
 
-  const checkout = () => {
-      return setstate(
-        search.filter(f => f.title.shortTitle.toLowerCase().includes(valueset.toLowerCase().trim()))
-        &&
-        search.filter(f => f.description.toLowerCase().includes(valueset.toLowerCase().trim()))
-      )
-        }
+  // const checkout = () => {
+      // return setstate(
+      //   search.filter(f => f.title.shortTitle.toLowerCase().includes(valueset.toLowerCase.trim()))
+      //   ||
+      //   search.filter(f => f.description.toLowerCase().includes(valueset.toLowerCase.trim()))
+      // )
+        // }
   useEffect(() => {
-   checkout()
-}, [ valueset])
+    return setstate(
+      search.filter(f => f.title.shortTitle.toLowerCase().includes(valueset))
+      ||
+      search.filter(f => f.description.toLowerCase().includes(valueset))
+    )}, [ valueset ,search])
 
   
 const responsive = {

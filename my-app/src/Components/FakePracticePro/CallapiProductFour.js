@@ -21,9 +21,9 @@ dispatch(FetchAction('DATA', {fake}))
   
   let chekout = () => {
       return setstate(
-        stateTwo.filter(f => f.title.toLowerCase().includes(valueset.toLowerCase().trim()))
+        stateTwo.filter(f => f.title.toLowerCase().includes(valueset))
         &&
-        stateTwo.filter(f => f.description.toLowerCase().includes(valueset.toLowerCase().trim()))
+        stateTwo.filter(f => f.description.toLowerCase().includes(valueset))
       )
     }
   useEffect(() => {

@@ -1,7 +1,7 @@
-import {   TextField, Button,Typography, Box,  List, ListItem, Toolbar, experimentalStyled } from '@mui/material'
+import {    Button,Typography,   List, ListItem, Toolbar } from '@mui/material'
 import SearchIcon from '@mui/icons-material/Search';
 import MenuIcon from '@mui/icons-material/Menu';
-import React, { useState,useEffect } from 'react'
+import React, { useState } from 'react'
 import LocalMallIcon from '@mui/icons-material/LocalMall';
 import CloseIcon from '@mui/icons-material/Close';
 import './CSS/navbar.css'
@@ -10,7 +10,7 @@ import { Link,  useParams } from 'react-router-dom';
 import { products } from './FlipkartData';
 import {  actionTwo } from '../../Redux/action';
 import { useDispatch } from 'react-redux';
-import { SER } from '../../Redux/actionType'
+// import { SER } from '../../Redux/actionType'
 import {fake} from './FLIPAKRTpRODUCTS/fakestoreai'
 
 const NewNavbar = (props) => {
@@ -22,7 +22,7 @@ const NewNavbar = (props) => {
  
   const { product  , qunt } = useSelector(state => state.Reducer)
   const {  Fquantity , Fproduct } = useSelector(state => state.FourthReducer)
-  let total_quantity = qunt + Fquantity
+    let total_quantity = qunt + Fquantity
     const {  valueset, valueser} = useSelector(state => state.ReducerTwo)
   const [text, settext] = useState()
   function changeInpute(value) {
@@ -68,7 +68,7 @@ const NewNavbar = (props) => {
         }
             
                   <Link className='flipkart' to='/'>
-                    <img style={{ color: "red", width: "83px" }} src={'https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/flipkart-plus_8d85f4.png'} />
+                    <img style={{ color: "red", width: "83px" }} src={'https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/flipkart-plus_8d85f4.png'} alt='myimg' />
           </Link>
           <div className='inpIco'>
             <div className='inpChild'>
